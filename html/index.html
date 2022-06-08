@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/e4409a217b.js" crossorigin="anonymous"></script>
   <title>Virtual Resume</title>
 </head>
 
@@ -18,6 +19,11 @@
         <img class=headshot src="./headshot.jpg" alt="headshot">
         <h1 id="name">SAMUEL CHELINI</h1>
         <h2 id="title">IT PROFESSIONAL</h2>
+        <div class=links>
+          <a href="https://www.linkedin.com/in/samchelini/"><i class="fa-brands fa-linkedin" style="font-size:25px;"></i></a>
+          <a href="https://github.com/samchelini/"><i class="fa fa-github" aria-hidden="true" style="font-size:25px;"></i></a>
+          <a href="mailto:samchelini@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true" style="font-size:25px;"></i></a>
+        </div>
       </div>
     </header>
         <div class="nav">
@@ -41,7 +47,7 @@
     <header id="work-experience" class=page>
       <div class="heading">
         <h1 class="sec">WORK EXPERIENCE</h1>
-        <h2 class="subsec">companies</h2>
+        <h2 class="subsec">experience</h2>
       </div>
     </header>
 
@@ -49,8 +55,12 @@
     <header id="certifications" class=page>
       <div class="heading">
         <h1 class="sec">CERTIFICATIONS</h1>
-        <h2 class="subsec">VMware Certified Professional - Data Center Virtualization 2021 (VCP-DCV-2021)</h2>
-        <h2 class="subsec">Cisco Certified Network Associate Routing and Switching (CCNA)</h2>
+          <ul class="cert-list">
+            <li><h2 class="subsec">VMware Certified Professional - Data Center Virtualization 2021 (VCP-DCV-2021)</h2></li>
+            <li><h2 class="subsec">Cisco Certified Network Associate Routing and Switching (CCNA)</h2></li>
+          </ul>
+          <img src="./VCP-DCV-2021-color.png" style="width:150px;height:150px;">
+          <img src="./ccna_routerswitching_large.jpg" style="width:150px;height:150px;">
       </div>
     </header>
 </body>

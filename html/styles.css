@@ -7,10 +7,22 @@ body {
   background: #2c3e50;
 }
 
+.links {
+  padding: 5px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none; /* no underline */
+  padding: 3px;
+  margin: 3px;
+}
+
 .background-img {
   margin: 0;
   position: fixed;
-  background: url("./background-dark.jpg");
+  /*background: url("./background-dark.jpg");*/
+  background: url("./retro-warm-blur.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,6 +81,14 @@ body {
   display: inline-block;
   padding: 5px;
   padding-bottom: 1.5em;
+}
+
+.cert-list {
+  list-style: none;
+}
+
+.cert-list li {
+  padding: 5px;
 }
 
 .nav a:link, .nav a:visited {
