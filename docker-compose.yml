@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   acme-challenge:
     image: nginx:latest
@@ -9,6 +7,12 @@ services:
     volumes:
       - ./certbot:/var/www/certbot:ro
       - ./nginx/conf.d/acme-challenge.conf:/etc/nginx/conf.d/acme-challenge.conf:ro
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot:/var/www/certbot:rw
+      - ./letsencrypt:/etc/letsencrypt:rw
+    command: certonly --webroot --webroot-path "/var/www/certbot" -d 'www.chelini.com' -m 'samchelini@gmail.com' --agree-tos -n
   virtual-resume:
     image: nginx:latest
     ports:
@@ -16,10 +20,5 @@ services:
     restart: always
     volumes:
       - ./html:/var/www/html:ro
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
-  certbot:
-    image: certbot/certbot:latest
-    volumes:
-      - ./certbot:/var/www/certbot:rw
-      - ./nginx/conf.d:/etc/letsencrypt:rw
-    command: certonly --webroot --webroot-path "/var/www/certbot" -d 'www.chelini.com' -m 'samchelini@gmail.com' --agree-tos -n
+      - ./nginx/conf.d/www.chelini.com.conf:/etc/nginx/conf.d/www.chelini.com.conf:ro
+      - ./letsencrypt:/etc/letsencrypt:ro
